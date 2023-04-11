@@ -5,7 +5,7 @@ services:
     env: docker
     repo: https://github.com/EnterOrion/mini-message-board.git
     region: oregon # optional (defaults to oregon)
-    plan: standard # optional (defaults to starter)
+    plan: free # optional (defaults to starter)
     branch: master # optional (defaults to master)
     rootDir: webdis
     dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
