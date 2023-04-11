@@ -3,6 +3,9 @@
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
       <h1><%= title %></h1>
@@ -23,8 +26,9 @@
           <div class="form-label">User</div> <input type="text" name="userName" value="<%=locals.userName %>" />
         </label>
             </br>
-      </div>
-      <button>Submit</button>
+  
+      <button class="form-button">Submit</button>
+    </div>
     </form>
   </body>
 </html>

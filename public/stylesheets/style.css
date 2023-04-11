@@ -11,6 +11,7 @@ a {
 
 h1 {
   font-size: 2.4rem;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 input,
@@ -45,6 +46,11 @@ button {
   outline: inherit;
 }
 
+.form-button {
+  width: 15%;
+  align-self: flex-end;
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -66,12 +72,16 @@ a:hover {
   padding: 1rem 2rem 3rem 2rem;
   width: 50%;
   border-radius: 20px;
-  border: 2px solid white;
+  border: 2px solid rgb(235, 222, 222);
 }
 
 .form-label {
   margin-right: 1rem;
   font-weight: bold;
+}
+
+input {
+  width: 70%;
 }
 
 h2 {
