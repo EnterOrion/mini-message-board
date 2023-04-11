@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "devStart": "nodemon ./bin/www",
+    "serverStart": "DEBUG=mini-message-board:* npm run devStart"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,5 +14,8 @@
     "express": "^4.18.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form method="POST" action="/new">
+      <label
+        >New message
+        <input
+          type="text"
+          name="newMessage"
+          value="<%=
+        locals.newMessage %>"
+        />
+      </label>
+    </br>
+      <label>
+        User <input type="text" name="userName" value="<%=locals.userName %>" />
+      </label>
+    </br>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
