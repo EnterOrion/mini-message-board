@@ -3,7 +3,7 @@ services:
   - type: web
     name: webdis
     env: docker
-    repo: https://github.com/render-examples/webdis.git # optional
+    repo: https://github.com/EnterOrion/mini-message-board.git
     region: oregon # optional (defaults to oregon)
     plan: standard # optional (defaults to starter)
     branch: master # optional (defaults to master)
@@ -27,7 +27,7 @@ services:
   - type: pserv
     name: minio
     env: docker
-    repo: https://github.com/render-examples/minio.git # optional
+    repo: https://github.com/EnterOrion/mini-message-board.git # optional
     envVars:
       - key: MINIO_ROOT_PASSWORD
         generateValue: true # will generate a base64-encoded 256-bit secret
@@ -43,7 +43,7 @@ services:
   - type: web
     name: sinatra
     env: ruby
-    repo: https://github.com/renderinc/sinatra-example.git
+    repo: https://github.com/EnterOrion/mini-message-board.git
     scaling:
       minInstances: 1
       maxInstances: 3
@@ -75,7 +75,7 @@ services:
     schedule: "0 * * * *"
     buildCommand: "true" # ensure it's a string
     startCommand: date
-    repo: https://github.com/render-examples/docker.git # optional
+    repo: https://github.com/EnterOrion/mini-message-board.git # optional
   # A background worker that consumes a queue
   - type: worker
     name: queue
