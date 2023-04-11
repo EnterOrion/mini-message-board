@@ -5,22 +5,25 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+      <h1><%= title %></h1>
     <form method="POST" action="/new">
-      <label
-        >New message
-        <input
-          type="text"
-          name="newMessage"
-          value="<%=
-        locals.newMessage %>"
-        />
-      </label>
-    </br>
-      <label>
-        User <input type="text" name="userName" value="<%=locals.userName %>" />
-      </label>
-    </br>
+      <div class="form-input">
+        <h2>New Message</h2>
+        <label
+          ><div class="form-label">Message</div>
+          <input
+            type="text"
+            name="newMessage"
+            value="<%=
+          locals.newMessage %>"
+          />
+        </label>
+            </br>
+        <label>
+          <div class="form-label">User</div> <input type="text" name="userName" value="<%=locals.userName %>" />
+        </label>
+            </br>
+      </div>
       <button>Submit</button>
     </form>
   </body>

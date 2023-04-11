@@ -3,22 +3,24 @@
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1><%= title %></h1>
-    <ul>
-      <% for (let i = 0; i < messages.length; i++) { %>
-      <div>
-        <li><%= messages[i].text %></li>
+    <% for (let i = 0; i < messages.length; i++) { %>
+    <div class="message">
+      <div class="text-user">
+        <div class="message-text"><%= messages[i].text %></div>
+        <div class="message-user"><strong><%= messages[i].user %></strong></div>
       </div>
-      <div>
-        <li><%= messages[i].user %></li>
-      </div>
-      <div>
-        <li><%= messages[i].added%></li>
-      </div>
-      <% } %>
-    </ul>
-    <p><a href="/new">Enter</a></p>
+      <div class="message-date"><em><%= messages[i].added%></em></div>
+    </div>
+    <% } %>
+    <button><a href="/new">Submit a new message</a></button>
   </body>
 </html>
