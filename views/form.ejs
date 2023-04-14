@@ -9,21 +9,23 @@
   </head>
   <body>
       <h1><%= title %></h1>
-    <form method="POST" action="/new">
+    <form method="POST" action="">
       <div class="form-input">
         <h2>New Message</h2>
         <label
           ><div class="form-label">Message</div>
           <input
             type="text"
-            name="newMessage"
-            value="<%=
-          locals.newMessage %>"
+            name="message"
+            required="true"
+            value="<%= typeof message !== 'undefined' ? message.message : '' %>"
           />
         </label>
             </br>
         <label>
-          <div class="form-label">User</div> <input type="text" name="userName" value="<%=locals.userName %>" />
+          <div class="form-label">User</div>
+           <input type="text" name="user"
+           required="true" value="<%= typeof message !== 'undefined' ? message.user : '' %>" />
         </label>
             </br>
   

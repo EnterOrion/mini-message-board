@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+const message_controller = require("../controllers/messageController");
 
 const messages = [
   {
@@ -15,21 +16,10 @@ const messages = [
 ];
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Messages", messages: messages });
-});
+router.get("/", message_controller.messageList);
 
-router.get("/new", function (req, res, next) {
-  res.render("form", { title: "Enter your message below" });
-});
+router.get("/new", message_controller.messageCreateGet);
 
-router.post("/new", function (req, res, next) {
-  messages.push({
-    text: req.body.newMessage,
-    user: req.body.userName,
-    added: new Date(),
-  });
-  res.redirect("/");
-});
+router.post("/new", message_controller.messageCreatePost);
 
 module.exports = router;
